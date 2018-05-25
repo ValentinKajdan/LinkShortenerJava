@@ -44,12 +44,22 @@ public class UrlShortener extends HttpServlet {
         String dbUrl = getServletContext().getInitParameter("url");
 		
 		try {
-            java.sql.PreparedStatement pr= database.db(dbUsername, dbPassword, dbUrl).prepareStatement("INSERT INTO url (base_url, shortening_code) VALUES (?, ?);");
+            java.sql.PreparedStatement pr= database.db(dbUsername, dbPassword, dbUrl).prepareStatement("INSERT INTO url (base_url, shortening_code, user_id) VALUES (?, ?, ?);");
     		pr.setString(1, base_url);
     		pr.setString(2, url_code);
+    		pr.setString(3, "0");
             int update = pr.executeUpdate();
             
-            response.sendRedirect("home");
+            System.out.println();
+            
+            request.setAttribute("url", request.getScheme()+
+            							"://"+
+            							request.getServerName()+
+            							":"+request.getServerPort()+
+            							request.getRequestURI()+
+            							"/"+
+            							url_code);
+            this.getServletContext().getRequestDispatcher("/showUrlShortener.jsp").forward(request, response);
         } catch (Exception e) {
             //Handle errors for Class.forName
             e.printStackTrace();
