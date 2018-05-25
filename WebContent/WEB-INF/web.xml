@@ -6,14 +6,14 @@
   </error-page>
   <context-param>
     <param-name>user</param-name>
-    <param-value>valentinkajdan</param-value>
+    <param-value>root</param-value>
   </context-param>
   <context-param>
     <param-name>pwd</param-name>
-    <param-value>Fgg4vrRTdhEM4qwQ</param-value>
+    <param-value>root</param-value>
   </context-param>
   <context-param>
     <param-name>url</param-name>
-    <param-value>jdbc:mysql://localhost/java</param-value>
+    <param-value>jdbc:mysql://localhost/javatest</param-value>
   </context-param>
 </web-app>
