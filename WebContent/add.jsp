@@ -23,7 +23,7 @@
 
 <h3>Add user</h3>
 
-<a href="/FirstServlet/home" >Back Home</a>
+<a href="/urlshortener/home" >Back Home</a>
 
 <%  if (request.getAttribute("addError") != null) { %>
 
@@ -31,7 +31,7 @@
 	
 <% } %>
 
-<form action="/FirstServlet/add" method="POST" >
+<form action="/urlshortener/add" method="POST" >
 	<input name="login" type="text" placeholder="Identifiant"></input>
 	<input name="password" type="password" placeholder="Mot de passe"></input>
 	<input type="submit" value="Ajouter"></input>

@@ -21,7 +21,7 @@
 	
 <% } %>
 
-<form action="connexion" method="POST" >
+<form action="/urlshortener/connexion" method="POST" >
 	<input name="login" type="text" placeholder="Identifiant"></input>
 	<input name="password" type="password" placeholder="Mot de passe"></input>
 	<input type="submit" value="Connexion"></input>

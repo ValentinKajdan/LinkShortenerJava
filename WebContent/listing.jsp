@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Home</title>
+<title>Listing Links</title>
 <style>
 	table {
 		border: 1px solid black;
@@ -25,22 +25,18 @@
 
 <h2>Bienvenue <%= request.getAttribute("username") %></h2>
 
-<h3>Liste des utilisateurs</h3>
+<h3>Liste des liens</h3>
 
 <table>
 	<tr>
-		<th>ID</th>
-		<th>username</th>
-		<th>password</th>
-		<th>Delete</th>
+		<th>URL</th>
+		<th>short URL</th>
 	</tr>
-<c:forEach items="${users}" var="user">
+<c:forEach items="${links}" var="link">
     <tr>
-        <td>${user[0]}</td>
-        <td>${user[1]}</td>
-        <td>${user[2]}</td>
+        <td>${link[0]}</td>
         <td>
-        	<a href="/urlshortener/delete?id=${user[0]}">X</a>
+        	<a href="${link[1]}">${link[1]}</a>
 		</td>
     </tr>
 </c:forEach>

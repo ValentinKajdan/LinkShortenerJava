@@ -8,6 +8,6 @@
 </head>
 <body>
 <h1>Oups 404!</h1>
-<a href="/FirstServlet/home">Cliquez ici</a> pour retourner sur la page d'accueil.
+<a href="/urlshortener/home">Cliquez ici</a> pour retourner sur la page d'accueil.
 </body>
 </html>
