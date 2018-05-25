@@ -69,7 +69,6 @@ public class Listing extends HttpServlet {
                     String link[] = { links.getString("base_url"), baseUrl+links.getString("shortening_code") };
                     userLinks.add(link);
                 }
-	    		System.out.println("yeah : " + userLinks);
 	            request.setAttribute("links", userLinks);
 
 	        } catch (Exception e) {

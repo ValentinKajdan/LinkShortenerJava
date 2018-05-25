@@ -10,7 +10,7 @@
 <% if(request.getAttribute("url") != null) { %>
 		<p style="color: red"><%= request.getAttribute("url") %></p>
 	<% } %>
-	<form action="urlshortener/url" method="post">
+	<form action="url" method="post">
 		<label for="base_url">Url to shorten :</label>
 		<input type="text" name="base_url"><br><br>
 		<button type="submit">valider</button>
